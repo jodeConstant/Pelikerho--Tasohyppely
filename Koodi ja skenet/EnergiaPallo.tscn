@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Koodi ja skenet/EnergiaPallonAnimaatio.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Koodi ja skenet/EnergiaPallo.gd" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 16.0
+
+[node name="EnergiaPallo" type="Area2D"]
+collision_layer = 0
+collision_mask = 6
+script = ExtResource( 5 )
+nopeus = 500.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -2.38419e-07, 1.90735e-06 )
+scale = Vector2( 0.75, 0.75 )
+frames = ExtResource( 1 )
+animation = "törmäys"
+[connection signal="body_entered" from="." to="." method="_on_EnergiaPallo_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
