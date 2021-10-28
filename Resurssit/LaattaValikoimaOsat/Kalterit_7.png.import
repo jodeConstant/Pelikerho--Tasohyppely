@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LaattaValikoima.png-ed79e366cefe6001b10d5ddcf7589204.stex"
+path="res://.import/Kalterit_7.png-d9ad6b648d9972f8275d643961d59a12.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resurssit/LaattaValikoima.png"
-dest_files=[ "res://.import/LaattaValikoima.png-ed79e366cefe6001b10d5ddcf7589204.stex" ]
+source_file="res://Resurssit/LaattaValikoimaOsat/Kalterit_7.png"
+dest_files=[ "res://.import/Kalterit_7.png-d9ad6b648d9972f8275d643961d59a12.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
