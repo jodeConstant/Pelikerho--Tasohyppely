@@ -28,7 +28,7 @@ func nollaa_tiedot():
 	kolikoiden_maara = 0
 
 func tappio():
-	get_tree().paused = true
+	emit_signal("peli_ohi")
 
 func aloita_taso_alusta():
 	nollaa_tiedot()
