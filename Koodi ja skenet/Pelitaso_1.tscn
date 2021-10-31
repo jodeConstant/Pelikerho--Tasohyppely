@@ -189,80 +189,60 @@ position = Vector2( 2112, 328 )
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 1976, 328 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Vihollinen2" parent="." groups=[
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 1528, 80 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Vihollinen3" parent="." groups=[
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 2160, 936 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Vihollinen4" parent="." groups=[
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 2480, 928 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Vihollinen5" parent="." groups=[
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 2528, -336 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Vihollinen6" parent="." groups=[
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 2304, -336 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Vihollinen7" parent="." groups=[
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 2176, -320 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Vihollinen8" parent="." groups=[
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 2400, -336 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Vihollinen9" parent="." groups=[
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 1960, -336 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Vihollinen10" parent="." groups=[
 "tuhoutuvat",
 ] instance=ExtResource( 7 )]
 position = Vector2( 2080, -336 )
-collision_layer = 4
-collision_mask = 7
 suunta_oikealle = false
 
 [node name="Kytkin2" parent="." instance=ExtResource( 10 )]
@@ -277,7 +257,7 @@ position = Vector2( 1688, 368 )
 
 [node name="TasonVaihto" parent="." instance=ExtResource( 13 )]
 position = Vector2( 2792, 696 )
-polku = "res://Koodi ja skenet/Pelitaso_0.tscn"
+polku = "res://Koodi ja skenet/Pelitaso_1.tscn"
 [connection signal="pallojen_maara_muuttui" from="Pelaaja" to="CanvasLayer/Käyttöliittymä" method="_pallojen_paivitys"]
 [connection signal="tween_completed" from="LiikkuvaAlusta/Tween" to="LiikkuvaAlusta" method="_on_Tween_tween_completed"]
 [connection signal="timeout" from="LiikkuvaAlusta/Timer" to="LiikkuvaAlusta" method="_on_Timer_timeout"]
