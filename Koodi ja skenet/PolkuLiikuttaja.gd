@@ -1,3 +1,7 @@
+# Tämä on monimutkaisempi skripti kuin
+# useimmat muut tässä projektissa.
+# Ei kannata aloittaa purkamaan miten se
+# toimii jos ohjelmointi ei ole tuttua.
 extends Path2D
 
 export var toimii: bool = true
@@ -38,7 +42,7 @@ onready var _pituus = curve.get_baked_length()
 var _tavoite: float
 
 # Voidaan käynnistää tai sammuttaa tämän funktion avulla
-func aseta_liike(var paalle: bool):
+func aseta_liike(paalle: bool):
 	if paalle:
 		_ajastin.paused = false
 		if _ajastin.time_left <= 0:
@@ -47,7 +51,7 @@ func aseta_liike(var paalle: bool):
 		toimii = false
 		_ajastin.paused = true
 	
-func aseta_toistoliike(var paalle: bool):
+func aseta_toistoliike(paalle: bool):
 	if paalle:
 		toistuu = true
 		# Käynnistetään tätä kautta vain jos
@@ -59,20 +63,17 @@ func aseta_toistoliike(var paalle: bool):
 	else:
 		toistuu = false
 
-func liikuta_kerran(var suunta_eteenpain: bool):
+func liikuta_kerran(suunta_eteenpain: bool):
 	# Asetetaan 'eteenpain' sen mukaan mitä 'suunta_eteenpain' on
 	# 	Muuttujien 'suunta_eteenpain' ja 'eteenpain' arvojen
 	# 	pitää olla samat
+	# ehtolause:
+	#	<vaihtoehto jos tosi> if <ehto> else <vaihtoehto jos epätosi>
 	eteenpain = suunta_eteenpain
 	_tavoite = _pituus if eteenpain else 0
 	toimii = true
 
 func _ready():
-	# Hieman erikoisempi ehtolause
-	#	muotoa:	a jos ehto on tosi, muuten b
-	#	tässä:	a on _pituus, 
-	#			ehto on muuttujan eteenpain arvo, 
-	#			b on 0
 	_tavoite = _pituus if eteenpain else 0
 	# PathFollow2D:n ominaisuus 'loop' määrää voiko
 	# polkua kiertää ympäri, eli jos yritetään mennä
@@ -135,9 +136,8 @@ func _physics_process(delta):
 		
 		# HUOMAA:
 		# Jos etäisyys määränpäähän on pienempi kuin liike päivityksen aikana,
-		# ajan myötä menetetään hieman matkaa, ellei tätä oteta huomioon
-		# LISÄTEHTÄVÄ:
-		# Muuta funktiota (ja luokkaa, jos haluat) niin, että tämä otetaan huomioon
+		# ajan myötä menetetään hieman matkaa, ellei tätä oteta huomioon. Jos
+		# kiinnostaa, voit yrittää tehdä pienen korjauksen tätä varten.
 
 
 func _on_Timer_timeout():

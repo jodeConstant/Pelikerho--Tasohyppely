@@ -48,7 +48,7 @@ func _ready():
 	# Päivitetään heti alussa, varmuuden vuoksi
 	emit_signal("pallojen_maara_muuttui", pallot)
 
-func lisaa_palloja(var maara: int):
+func lisaa_palloja(maara: int):
 	# Poimitaan vain jos mahtuu
 	if pallot < pallot_max:
 		pallot += maara

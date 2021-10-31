@@ -13,7 +13,6 @@ func _ready():
 
 func _on_Ammus_body_entered(body):
 	if body is Pelaaja:
-		#if body.has_method("lisaa_palloja"):
 		body.lisaa_palloja(maara)
 		# Muista yhdistää Pelaaja:n signaali
 		# Käyttöliittymään käsin skenessä

@@ -20,7 +20,7 @@ onready var _ajastin = $Timer
 onready var _tavoitepiste = loppupiste
 
 # Voidaan käynnistää tai sammuttaa tämän funktion avulla
-func aloita_siirto(var toimii: bool):
+func aloita_siirto(toimii: bool):
 	_toimii = toimii
 
 func _ready():

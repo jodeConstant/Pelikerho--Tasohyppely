@@ -26,7 +26,7 @@ func kayta_kytkinta():
 # voidaan kytkeä 'tila_muuttunut' signaali tähän.
 # Tämä muuttaa kytkimen tilaa, mutta ei lähetä
 # omaa signaalia
-func _aseta_tila(var t: bool):
+func _aseta_tila(t: bool):
 	tila = t
 	if tila:
 		_kuva.frame = 1

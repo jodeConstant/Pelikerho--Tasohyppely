@@ -25,7 +25,7 @@ onready var _ajastin = $Timer												#
 # Tämä funktio käynnistää tai sammuttaa liikkuvan kappaleen:
 #	Jos 'paalle' on true, se käynnistetään
 #	Jos 'paalle' on false, se sammutetaan
-func aseta_liike(var paalle: bool):
+func aseta_liike(paalle: bool):
 	if paalle:
 		_ajastin.paused = false
 		if _ajastin.time_left <= 0:
@@ -34,7 +34,7 @@ func aseta_liike(var paalle: bool):
 		_tween.set_active(false)
 		_ajastin.paused = true
 	
-func aseta_toistoliike(var paalle: bool):									#
+func aseta_toistoliike(paalle: bool):									#
 	if paalle:																#
 		toista = true														#
 		_aseta_siirto(position, loppupiste if eteenpain else alkupiste)		#
@@ -47,7 +47,7 @@ func aseta_toistoliike(var paalle: bool):									#
 	else:																	#
 		toista = false														#
 
-func liikuta_kerran(var suunta_eteenpain: bool):							#
+func liikuta_kerran(suunta_eteenpain: bool):							#
 	# Asetetaan 'eteenpain' sen mukaan mitä 'suunta_eteenpain' on			#
 	# 	Muuttujien 'suunta_eteenpain' ja 'eteenpain' arvojen				#
 	# 	pitää olla samat													#
@@ -61,7 +61,7 @@ func _aloita_uusi_liike():													#
 
 # Tämä funktio valmistaa seuraavan siirron, kun sille annetaan
 # siirtymaän alku- ja loppupiste.
-func _aseta_siirto(var alku: Vector2, var loppu: Vector2):
+func _aseta_siirto(alku: Vector2, loppu: Vector2):
 	# Aika saadaan jakamalla matka nopeudella
 	var siirto_aika = alku.distance_to(loppu) / nopeus
 	# Tällä funktiolla kerrotaan mitä ominaisuutta muutetaan ja miten.

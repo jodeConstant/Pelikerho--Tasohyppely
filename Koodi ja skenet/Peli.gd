@@ -39,7 +39,7 @@ func aloita_taso_alusta():
 
 # Asetetaan peli tauolle, näytetään valikko ja
 # asetetaan seuraavan tason polku
-func taso_suoritettu(var seuraavan_polku: String):
+func taso_suoritettu(seuraavan_polku: String):
 	if seuraavan_polku:
 		_seuraavan_tason_polku = seuraavan_polku
 	# Näytä suoritus

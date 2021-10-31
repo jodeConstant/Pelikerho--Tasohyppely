@@ -1,8 +1,6 @@
 extends KinematicBody2D
 
 export var nopeus: float = 180
-#var _kiinni_maahan: bool = true
-#export var tarttumisen_vektori: Vector2 = Vector2(0,32)
 export var suunta_oikealle: bool = true
 
 onready var _animoitu_kuva = $AnimatedSprite
@@ -27,17 +25,18 @@ func _physics_process(delta):
 	_nopeus_vektori.x = nopeus if suunta_oikealle else -nopeus
 	
 	_nopeus_vektori.y += 980.0 * delta
-		
+	
+	# Liikutetaan hahmoa:
 	_nopeus_vektori = move_and_slide_with_snap(
 		_nopeus_vektori,
-		Vector2(0,32),#tarttumisen_vektori if _kiinni_maahan else Vector2.ZERO,
+		Vector2(0,32),
 		Vector2.UP
 		)
-		
-	# Funktio joka liikuttaa hahmoa palauttaa vektorin joka
+	# Tämä hahmoa liikuttava funktio palauttaa vektorin joka
 	# kuvaa onnistuneen liikkeen nopeutta. Jos sen x-luku on hyvin
 	# pieni, hahmo ei onnistunut liikkumaan vaakasuunnassa, ja
 	# pitää luultavasti vaihtaa suuntaa.
+	
 	#	'abs(luku)' palauttaa luvun itseisarvon,
 	#	eli eron nollasta. Tässä tapauksessa se poistaa
 	#	miinusmerkin jos luku on pienempi kuin 0

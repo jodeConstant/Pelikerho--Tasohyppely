@@ -24,15 +24,17 @@ func _process(delta):
 		_tauko.show()
 
 # Kolikoiden ja pallojen määrän näyttämistä varten:
-
+################################
 func _kolikon_paivitys(kolikot):
 	_kolikot.text = str(kolikot)
 
 func _pallojen_paivitys(pallot):
 	_pallot.text = str(pallot)
+################################
+
 
 # Ilmoitusten näytämistä varten:
-
+################################
 func _nayta_tasonvaihto():
 	_seuraava.show()
 	get_tree().paused = true
@@ -40,11 +42,11 @@ func _nayta_tasonvaihto():
 func _nayta_tappio():
 	_tappio.show()
 	get_tree().paused = true
-
 ################################
 
-# Nappeja varten
 
+# Nappeja varten
+################################
 func _on_JatkaPelia_pressed():
 	_tauko.hide()
 	get_tree().paused = false
@@ -57,3 +59,4 @@ func _on_SeuraavaTaso_pressed():
 func _on_Uudestaan_pressed():
 	Peli.aloita_taso_alusta()
 	get_tree().paused = false
+################################
