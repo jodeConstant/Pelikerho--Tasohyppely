@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Pelaaja",
 "language": "GDScript",
-"path": "res://Koodi ja skenet/Pelaaja.gd"
+"path": "res://Koodi ja skenet/Hahmot/Pelaaja.gd"
 } ]
 _global_script_class_icons={
 "Pelaaja": ""
@@ -24,7 +24,7 @@ config/name="Tasohyppely"
 
 [autoload]
 
-Peli="*res://Koodi ja skenet/Peli.gd"
+Peli="*res://Koodi ja skenet/PelinOhjaus/Peli.gd"
 
 [input]
 

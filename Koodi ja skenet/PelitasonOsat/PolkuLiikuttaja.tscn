@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Koodi ja skenet/PelitasonOsat/PolkuLiikuttaja.gd" type="Script" id=2]
+
+
+[node name="PolkuLiikuttaja" type="Path2D"]
+curve = null
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "1. Muokkaa Curve kohtaa vasta kun tämä skene on lisätty toiseen skeneen, kuten pelitasoon.
+2. KinematicBody2D -tyyppinen liikkuva kappale asetetaan tämän skenen alisolmuksi, mutta vasta kun tämä skene on lisätty johonkin toiseen skeneen."
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotate = false
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
