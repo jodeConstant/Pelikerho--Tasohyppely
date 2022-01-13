@@ -4,8 +4,6 @@
 [ext_resource path="res://Resurssit/Kuvat/energia_pallo_1.png" type="Texture" id=2]
 [ext_resource path="res://Resurssit/Kuvat/kolikko.png" type="Texture" id=3]
 
-
-
 [node name="Käyttöliittymä" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,11 +13,21 @@ __meta__ = {
 "_editor_description_": "Aseta tämä CanvasLayer solmun alisolmuksi."
 }
 
+[node name="PallojenTausta" type="ColorRect" parent="."]
+margin_left = 928.0
+margin_top = 536.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PallojenMäärä" type="Label" parent="."]
-margin_left = 872.0
-margin_top = 520.0
-margin_right = 904.0
-margin_bottom = 536.0
+margin_left = 840.0
+margin_top = 544.0
+margin_right = 872.0
+margin_bottom = 560.0
 rect_scale = Vector2( 4, 4 )
 text = "0"
 align = 2
@@ -28,15 +36,24 @@ __meta__ = {
 }
 
 [node name="PallonKuva" type="Sprite" parent="."]
-position = Vector2( 944, 544 )
+position = Vector2( 992, 568 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 
+[node name="KolikoidenTausta" type="ColorRect" parent="."]
+margin_left = 888.0
+margin_right = 1024.0
+margin_bottom = 64.0
+color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="KolikoidenMäärä" type="Label" parent="."]
-margin_left = 864.0
-margin_top = 16.0
-margin_right = 898.0
-margin_bottom = 32.0
+margin_left = 832.0
+margin_top = 8.0
+margin_right = 864.0
+margin_bottom = 24.0
 rect_scale = Vector2( 4, 4 )
 text = "0"
 align = 2
@@ -45,9 +62,14 @@ __meta__ = {
 }
 
 [node name="KolikonKuva" type="Sprite" parent="."]
-position = Vector2( 936, 40 )
+position = Vector2( 992, 32 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 3 )
+
+[node name="AjanTausta" type="ColorRect" parent="."]
+margin_right = 176.0
+margin_bottom = 40.0
+color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
 
 [node name="Aika" type="Label" parent="."]
 margin_right = 85.0
