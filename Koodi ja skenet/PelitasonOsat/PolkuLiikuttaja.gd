@@ -8,8 +8,8 @@ export var toimii: bool = true
 export var nopeus: float = 140
 export var tauko: float = 1
 
-# Jos tosi, liikkuva osa liikkuu
-# takaisin alkuun päin
+# Jos tosi, liikkuva osa liikkuu eteenpäin,
+# muuten liikkuu takaisin alkuun päin
 export var eteenpain: bool = true
 
 # Jatkaa liikettä perille saapumisen
@@ -136,8 +136,8 @@ func _physics_process(delta):
 		
 		# HUOMAA:
 		# Jos etäisyys määränpäähän on pienempi kuin liike päivityksen aikana,
-		# ajan myötä menetetään hieman matkaa, ellei tätä oteta huomioon. Jos
-		# kiinnostaa, voit yrittää tehdä pienen korjauksen tätä varten.
+		# ajan myötä menetetään hieman matkaa, ellei tätä oteta huomioon.
+		# Jos kiinnostaa, voit yrittää tehdä pienen korjauksen tätä varten.
 
 
 func _on_Timer_timeout():
